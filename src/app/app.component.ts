@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { LivresService } from './Services/livres.services';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project-livre';
+  constructor(private logins:LivresService) { }
+  ngOnInit(): void {
+   
+  }
+  disconnect(){
+   
+   sessionStorage.clear();
+  }
 }

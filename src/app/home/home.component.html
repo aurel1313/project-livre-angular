@@ -1,0 +1,9 @@
+<div id="cookie">
+   
+   
+   <p *ngIf="!this.value">Bonjour {{storage}} </p>
+   <p *ngIf="this.storage==null">Aucun utilisateur trouvé,veuillez vous connecté et rafraichir la page avant de vous connecte</p>  
+   <button (click)="disconnect()">se deco</button>
+    
+   
+</div>

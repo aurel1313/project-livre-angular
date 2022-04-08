@@ -1,0 +1,13 @@
+<div class="form">
+    <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" [formControl]="login">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" [formControl]="password"> 
+
+       <button type="submit" (click)="connect()" >se connecter</button>
+      
+    </form>
+   <p *ngIf="this.connect">{{login.value}}</p> 
+</div>

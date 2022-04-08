@@ -1,0 +1,23 @@
+<div class ="reservation">
+    <h1>Réservation</h1>
+  
+       
+    <input type="radio" id="all" name="reservation" (click)="all()" >
+    <label for="all">Tous les livres</label><br>
+    <input type="radio" id="reserve" name="reservation" (click)="getDispo()">
+    <label for="reserve"> non reservés</label>
+    
+    <div class="livres" *ngFor="let elt of this.livres " style="margin-top:5rem" >
+        <strong>{{elt.titre}}</strong>
+        <p>Disponible:{{elt.disponible}}</p>
+        <p>{{elt.auteur}}</p>
+        <img src="{{elt.image}}" alt="" width="150">
+        <div *ngIf="elt.disponible==true">
+            <button (click)="setDispo()">Reserver</button>
+        </div>
+        <div *ngIf="elt.disponible==false">
+            <button (click)="setDispo2()">Rendre</button>
+       
+    </div>  
+    
+</div>
